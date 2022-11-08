@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2022_11_08_044159) do
   end
 
   create_table "jobs", force: :cascade do |t|
+    t.string "headline"
     t.string "date_posted"
     t.string "expires"
     t.string "care_needed"
