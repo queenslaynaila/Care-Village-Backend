@@ -1,5 +1,5 @@
 puts "🌱 Seeding data..."
-Category (Baby sitter, Pet care Provider, Care companion, House keeper)
+ 
 # place your seeds here
 # create categories
 Category.create(name: "Baby Sitter")
