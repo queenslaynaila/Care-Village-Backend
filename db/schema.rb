@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2022_11_08_034401) do
     t.text "email"
     t.string "phonenumber"
     t.string "password"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "sitters", force: :cascade do |t|
