@@ -1,4 +1,12 @@
 require 'faker'
+
+puts "Deleting old data..."
+Account.destroy_all
+Client.destroy_all
+Job.destroy_all
+Sitter.destroy_all 
+Category.destroy_all
+
 puts "🌱 Seeding data..."
 
 puts "seeding categories"
