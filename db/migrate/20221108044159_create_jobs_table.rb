@@ -8,7 +8,7 @@ class CreateJobsTable < ActiveRecord::Migration[6.1]
       t.string :schedule #can be daily weekly or monthly
       t.string :location #users registered  location
       t.integer :sitter_id
-      t.integer :client_id
+      t.integer :client_id 
       t.string :status, default:"Not Hired"
       t.timestamps
     end
