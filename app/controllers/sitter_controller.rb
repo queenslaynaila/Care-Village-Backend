@@ -1,4 +1,4 @@
-class SitterSignupController < ApplicationController
+class SitterController < ApplicationController
     post '/sitterregistration' do
         sitter = Sitter.create(
             first_name: params[:firstname],
@@ -15,4 +15,13 @@ class SitterSignupController < ApplicationController
 
         )
     end
+    get '/sitters' do
+        Sitter.all.to_json
+    end
+
+    get '/sitter/:id' do
+        Sitter.find(params[:id]).to_json
+    end
+    
+
 end
