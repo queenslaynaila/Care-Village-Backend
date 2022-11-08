@@ -1,4 +1,12 @@
 require 'faker'
+
+puts "Deleting old data..."
+Account.destroy_all
+Client.destroy_all
+Job.destroy_all
+Sitter.destroy_all 
+Category.destroy_all
+
 puts "🌱 Seeding data..."
 
 puts "seeding categories"
@@ -75,7 +83,7 @@ puts "done seeding jobs"
 
 puts "seeding accounts!"
 Client.all.each do |client|
-  2.times do
+  1.times do
     Account.create(
       username: client.username,
       password: client.password,
@@ -88,7 +96,7 @@ end
 
 puts "seeding accounts!"
 Sitter.all.each do |sitter|
-  2.times do
+  1.times do
     Account.create(
       username: sitter.user_name,
       password: sitter.password,
