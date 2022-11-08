@@ -12,9 +12,5 @@ class ApplicationController < Sinatra::Base
       response.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, PATCH, DELETE, OPTIONS"
   end
 
-  get '/' do
-      {hello: "You can start 😃"}.to_json
-  end
 
-  
 end
