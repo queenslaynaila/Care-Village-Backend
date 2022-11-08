@@ -14,6 +14,13 @@ class SitterController < ApplicationController
             category_id: nil
 
         )
+        sitter_account = Account.create(
+            username: params[:username],
+            password: params[:password],
+            usertype: "sitter",
+            client_id: nil,
+            sitter_id: sitter.id
+        )
     end
     get '/sitters' do
         Sitter.all.to_json
@@ -22,6 +29,6 @@ class SitterController < ApplicationController
     get '/sitter/:id' do
         Sitter.find(params[:id]).to_json
     end
-    
+
 
 end
