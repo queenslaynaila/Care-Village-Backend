@@ -12,6 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2022_11_08_044159) do
 
+  create_table "accounts", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.string "usertype"
+    t.integer "client_id"
+    t.integer "sitter_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -23,7 +33,7 @@ ActiveRecord::Schema.define(version: 2022_11_08_044159) do
     t.string "lastname"
     t.string "username"
     t.string "location"
-    t.text "email"
+    t.string "email"
     t.string "phonenumber"
     t.string "password"
     t.datetime "created_at", precision: 6, null: false
@@ -31,32 +41,30 @@ ActiveRecord::Schema.define(version: 2022_11_08_044159) do
   end
 
   create_table "jobs", force: :cascade do |t|
-    t.string "dateposted"
+    t.string "date_posted"
     t.string "expires"
-    t.string "careneeded"
+    t.string "care_needed"
     t.string "schedule"
     t.string "location"
+    t.integer "sitter_id"
+    t.integer "client_id"
+    t.string "status", default: "Not Hired"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "sitters", force: :cascade do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.string "username"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "user_name"
     t.string "gender"
     t.string "email"
-    t.string "phonenumber"
-    t.string "yearOfBirth"
+    t.string "phone_number"
+    t.integer "year_of_birth"
     t.string "password"
     t.string "location"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password"
+    t.integer "age"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
