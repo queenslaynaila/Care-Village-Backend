@@ -16,6 +16,7 @@ class ClientController < ApplicationController
             client_id: client.id,
             sitter_id: nil
         )
+        client_account.to_json
     end
     get '/clients' do
         Client.all.to_json

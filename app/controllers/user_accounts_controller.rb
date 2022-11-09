@@ -1,13 +1,12 @@
 class UserAccountsController < ApplicationController
-
-    get '/users' do 
+    get '/users' do
         Account.all.to_json
     end
+    post '/users' do
+      user = Account.find_by(username:params[:username],password:params[:password])
+      user.to_json
 
-    get '/users/clients' do 
     end
 
-    get '/users/sitters' do 
-    end
 
 end

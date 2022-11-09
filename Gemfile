@@ -17,7 +17,9 @@ gem "rack-contrib", "~> 2.3"
 # Run common tasks from the command line
 # https://github.com/ruby/rake
 gem "rake"
-
+# More Rack middleware! Used to handle CORS requests
+# https://github.com/cyu/rack-cors
+gem "rack-cors", "~> 1.1"
 # Provides functionality to interact with a SQLite3 database
 # https://github.com/sparklemotion/sqlite3-ruby
 gem "sqlite3", "~> 1.4"
