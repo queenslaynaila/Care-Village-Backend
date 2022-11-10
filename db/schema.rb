@@ -40,7 +40,23 @@ ActiveRecord::Schema.define(version: 2022_11_10_131726) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "joboffers", force: :cascade do |t|
+  create_table "jobs", force: :cascade do |t|
+    t.string "headline"
+    t.string "date_posted"
+    t.string "expires"
+    t.string "care_needed"
+    t.string "schedule"
+    t.string "location"
+    t.string "description"
+    t.text "majorrequirement"
+    t.integer "sitter_id"
+    t.integer "client_id"
+    t.string "status", default: "Not Hired"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "offers", force: :cascade do |t|
     t.string "title"
     t.string "name"
     t.integer "sitter_id"
@@ -56,24 +72,8 @@ ActiveRecord::Schema.define(version: 2022_11_10_131726) do
     t.text "Languages"
     t.string "workexperience"
     t.string "email"
-    t.integer "phonenumber"
+    t.string "phonenumber"
     t.integer "ratecharged"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "jobs", force: :cascade do |t|
-    t.string "headline"
-    t.string "date_posted"
-    t.string "expires"
-    t.string "care_needed"
-    t.string "schedule"
-    t.string "location"
-    t.string "description"
-    t.text "majorrequirement"
-    t.integer "sitter_id"
-    t.integer "client_id"
-    t.string "status", default: "Not Hired"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

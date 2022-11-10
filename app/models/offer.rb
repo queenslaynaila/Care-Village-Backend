@@ -1,4 +1,4 @@
-class Offer < ActiveRecord::Base
+class Offer< ActiveRecord::Base
   belongs_to :sitter
   belongs_to :category
 

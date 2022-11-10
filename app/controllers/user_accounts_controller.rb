@@ -13,7 +13,6 @@ class UserAccountsController < ApplicationController
       user.update(
           username: params[:username],
           password: params[:password])
-
     end
 
     delete '/user/:id' do

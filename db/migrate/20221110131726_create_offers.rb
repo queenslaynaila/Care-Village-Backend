@@ -1,6 +1,6 @@
 class CreateOffers < ActiveRecord::Migration[6.1]
   def change
-    create_table :joboffers do |t|
+    create_table :offers do |t|
       t.string :title
       t.string :name
       t.integer :sitter_id
@@ -16,7 +16,7 @@ class CreateOffers < ActiveRecord::Migration[6.1]
       t.text :Languages
       t.string :workexperience #in years
       t.string :email
-      t.integer :phonenumber
+      t.string :phonenumber
       t.integer :ratecharged
       t.timestamps
     end

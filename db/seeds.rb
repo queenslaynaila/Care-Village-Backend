@@ -4,7 +4,7 @@ puts "Deleting old data..."
 Account.destroy_all
 Client.destroy_all
 Job.destroy_all
-Sitter.destroy_all 
+Sitter.destroy_all
 Category.destroy_all
 
 puts "🌱 Seeding data..."
@@ -106,4 +106,37 @@ Sitter.all.each do |sitter|
     )
   end
 end
+puts "seeding offers"
+Offer.create(
+  title:"Looking for anyone in need of a babysitter",
+  name:"Queenslay",
+  sitter_id:1,
+  category_id:1,
+  about:"I am a lover of all things caring",
+  keyskills: "babysitting",
+  gender:"female",
+  additionalqualification:"certified first aid license",
+  location: "Nairobi",
+  comfortability_working_outside_location:"not comfortable",
+  Languages:"English",
+  workexperience:"3 years",
+  email:"queenslay@gmail.com",
+  phonenumber:"12345678",
+  ratecharged:5000)
+  Offer.create(
+    title:"Looking for anyone in need of a pet care person",
+    name:"Anne",
+    sitter_id:2,
+    category_id:2,
+    about:"When im not coding im walking my dogs",
+    keyskills: "excellent pet care",
+    gender:"female",
+    additionalqualification:"certified animal trainer",
+    location: "Nairobi",
+    comfortability_working_outside_location:"comfortable",
+    Languages:"English and French",
+    workexperience:"5 years",
+    email:"ann.mwangi@student.moringaschool.com",
+    phonenumber:"12345678",
+    ratecharged:8000)
 puts "🌱 Done seeding!"
