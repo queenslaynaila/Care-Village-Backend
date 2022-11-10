@@ -56,6 +56,17 @@ Sitter.create(first_name:"Queenslay",last_name:"Jema",
   age:26,
   category_id:2
  )
+ Sitter.create(first_name:"Daphney",last_name:"Mayer",
+  user_name:"daphmayer",
+  gender:"Female",
+  email:"daph@student.moringaschool.com",
+  phone_number:Faker::PhoneNumber.cell_phone ,
+  year_of_birth:1996,
+  password:"daph02",
+  location:"Nairobi",
+  age:26,
+  category_id:3
+ )
  puts "done seeding sitters"
 
 puts "now seeding jobs"
@@ -117,7 +128,8 @@ Offer.create(
   gender:"female",
   additionalqualification:"certified first aid license",
   location: "Nairobi",
-  comfortability_working_outside_location:"not comfortable",
+  availability:"available",
+  education:"certificate",
   Languages:"English",
   workexperience:"3 years",
   email:"queenslay@gmail.com",
@@ -133,7 +145,8 @@ Offer.create(
     gender:"female",
     additionalqualification:"certified animal trainer",
     location: "Nairobi",
-    comfortability_working_outside_location:"comfortable",
+    availability:"available",
+    education:"certificate",
     Languages:"English and French",
     workexperience:"5 years",
     email:"ann.mwangi@student.moringaschool.com",
