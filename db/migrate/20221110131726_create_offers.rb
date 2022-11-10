@@ -12,7 +12,7 @@ class CreateOffers < ActiveRecord::Migration[6.1]
       t.string :gender
       t.text :additionalqualification #any additional qualification that makes u more suitable for the job eg first aid experince
       t.string :location
-      t.text :comfortability_workinh_outside_location #
+      t.text :comfortability_working_outside_location #
       t.text :Languages
       t.string :workexperience #in years
       t.string :email

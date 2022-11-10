@@ -25,4 +25,21 @@ class ClientController < ApplicationController
     get '/client/:id' do
         Client.find(params[:id]).to_json
     end
+
+    delete '/client/:id' do
+        client= Invoice.find(params[:id])
+         client.destroy
+        client.to_json
+    end
+
+    patch '/client/:id' do
+        client = Client.update(
+            firstname: params[:firstname],
+            lastname: params[:lastname],
+            username: params[:username],
+            location: params[:location],
+            email: params[:email],
+            password: params[:password]
+        )
+    end
 end

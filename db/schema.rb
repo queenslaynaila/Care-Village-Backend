@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2022_11_10_131726) do
     t.string "gender"
     t.text "additionalqualification"
     t.string "location"
-    t.text "comfortability_workinh_outside_location"
+    t.text "comfortability_working_outside_location"
     t.text "Languages"
     t.string "workexperience"
     t.string "email"
