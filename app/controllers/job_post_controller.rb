@@ -2,6 +2,7 @@ class JobPostController < ApplicationController
 
     get '/jobs' do
         Job.all.to_json
+        
     end
 
     get '/job/:id' do

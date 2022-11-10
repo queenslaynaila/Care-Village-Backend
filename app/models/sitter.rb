@@ -4,4 +4,5 @@ class Sitter < ActiveRecord::Base
    belongs_to :category
    has_many :jobs
    has_many :clients, through: :jobs
+   has_one :offer
 end

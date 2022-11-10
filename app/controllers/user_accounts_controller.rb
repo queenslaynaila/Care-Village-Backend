@@ -5,7 +5,8 @@ class UserAccountsController < ApplicationController
     post '/users' do
       user = Account.find_by(username:params[:username],password:params[:password])
       user.to_json
-
+    end
+    patch '/users' do
     end
 
 

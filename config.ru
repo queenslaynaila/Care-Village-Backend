@@ -7,11 +7,11 @@ use Rack::Cors do
   end
 end
 
- 
+
 
 # Parse JSON from the request body into the params hash
 use Rack::JSONBodyParser
-
+use OfferController
 use UserAccountsController
 use ClientController
 use SitterController
