@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2022_11_10_131726) do
     t.string "email"
     t.string "phonenumber"
     t.string "password"
+    t.string "gender"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -57,22 +58,10 @@ ActiveRecord::Schema.define(version: 2022_11_10_131726) do
   end
 
   create_table "offers", force: :cascade do |t|
-    t.string "title"
-    t.string "name"
     t.integer "sitter_id"
     t.integer "category_id"
-    t.string "about"
-    t.string "keyskills"
-    t.string "availability", default: "Available"
-    t.string "education"
-    t.string "gender"
-    t.text "additionalqualification"
-    t.string "location"
-    t.text "Languages"
-    t.string "workexperience"
-    t.string "email"
-    t.string "phonenumber"
-    t.integer "ratecharged"
+    t.integer "client_id"
+    t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

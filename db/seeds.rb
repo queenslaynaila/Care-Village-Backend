@@ -22,14 +22,16 @@ username:"soilatorome",
 location:"Nairobi",
 email:"soila.torome@student.moringaschool.com",
 phonenumber:Faker::PhoneNumber.cell_phone ,
-password:"soilatorome")
+password:"soilatorome",
+gender:"female")
 Client.create(firstname:"Brian",lastname:"Wangombe",
   username:"brianwangombe",
   location:"Nakuru",
 
   email:"brian.wangombe@student.moringaschool.com",
   phonenumber:Faker::PhoneNumber.cell_phone ,
-  password:"brianwangombe12"
+  password:"brianwangombe12",
+  gender:"male"
 )
 puts "done seeding clients"
 
@@ -100,7 +102,9 @@ Client.all.each do |client|
       password: client.password,
       usertype: "client",
       client_id: client.id,
-      sitter_id: nil
+      sitter_id: nil,
+
+
     )
   end
 end
@@ -119,37 +123,13 @@ Sitter.all.each do |sitter|
 end
 puts "seeding offers"
 Offer.create(
-  title:"Looking for anyone in need of a babysitter",
-  name:"Queenslay",
   sitter_id:1,
   category_id:1,
-  about:"I am a lover of all things caring",
-  keyskills: "babysitting",
-  gender:"female",
-  additionalqualification:"certified first aid license",
-  location: "Nairobi",
-  availability:"available",
-  education:"certificate",
-  Languages:"English",
-  workexperience:"3 years",
-  email:"queenslay@gmail.com",
-  phonenumber:"12345678",
-  ratecharged:5000)
+  client_id:1,
+  price:8000)
   Offer.create(
-    title:"Looking for anyone in need of a pet care person",
-    name:"Anne",
-    sitter_id:2,
-    category_id:2,
-    about:"When im not coding im walking my dogs",
-    keyskills: "excellent pet care",
-    gender:"female",
-    additionalqualification:"certified animal trainer",
-    location: "Nairobi",
-    availability:"available",
-    education:"certificate",
-    Languages:"English and French",
-    workexperience:"5 years",
-    email:"ann.mwangi@student.moringaschool.com",
-    phonenumber:"12345678",
-    ratecharged:8000)
+    sitter_id:1,
+  category_id:1,
+  client_id:1,
+  price:8000)
 puts "🌱 Done seeding!"
