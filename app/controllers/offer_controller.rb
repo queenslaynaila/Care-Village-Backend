@@ -11,7 +11,7 @@ class OfferController < ApplicationController
     offer = Offer.create(
       category_id: params[:category_id],
       client_id: params[:client_id],
-      sitter_id: params[:sittee_id],
+      sitter_id: params[:sitter_id],
       price: params[:price]
       )
    offer.to_json
