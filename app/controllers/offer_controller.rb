@@ -9,20 +9,11 @@ class OfferController < ApplicationController
 
   post '/offer' do
     offer = Offer.create(
-      title: params[:title],
-      name: params[:name],
-      sitter_id:params[:sitterid],
-      category_id:params[:category_id],
-      about: params[:about],
-      keyskills: params[:keyskills],
-      gender: params[:gender],
-      additionalqualification: params[:additionalqualification],
-      location: params[:location],
-      Languages:params[:Languages],
-      workexperience:params[:workexperience],
-      email:params[:email],
-      phonenumber:params[:phonenumber],
-      ratecharged:params[:ratecharged])
+      category_id: params[:category_id],
+      client_id: params[:client_id],
+      sitter_id: params[:sittee_id],
+      price: params[:price]
+      )
    offer.to_json
   end
 
