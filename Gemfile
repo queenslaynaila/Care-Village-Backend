@@ -3,7 +3,10 @@ source "https://rubygems.org"
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
-
+gem 'bcrypt'
+gem 'sinatra-flash'
+gem 'tux'
+gem 'thin'
 # An object-relational mapper
 # https://guides.rubyonrails.org/active_record_basics.html
 gem "activerecord", "~> 6.1"
@@ -17,7 +20,9 @@ gem "rack-contrib", "~> 2.3"
 # Run common tasks from the command line
 # https://github.com/ruby/rake
 gem "rake"
-
+# More Rack middleware! Used to handle CORS requests
+# https://github.com/cyu/rack-cors
+gem "rack-cors", "~> 1.1"
 # Provides functionality to interact with a SQLite3 database
 # https://github.com/sparklemotion/sqlite3-ruby
 gem "sqlite3", "~> 1.4"
